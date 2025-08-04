@@ -1,0 +1,123 @@
+li.completed{
+   text-decoration: line-through;
+   color: gray;
+}
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  width: 90%;
+  max-width: 450px;
+  background: rgb(240, 228, 215);
+  border-radius: 12px;
+  padding: 30px 20px;
+}
+
+.page h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+#task-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+#task-input:focus {
+  border-color: #4caf50;
+}
+
+#add-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #511a9e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition:  1s ease;
+}
+#add-button:hover {
+  background-color: #43a047;
+}
+#task-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#task-list li {
+  background-color: #f1f1f1;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+#task-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+#task-list li button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #e53935;
+  cursor: pointer;
+}
+
+/* Delete All Button */
+#delete-items {
+  width: 100%;
+  padding: 10px;
+  background-color: #511a9e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  display: none;
+  cursor: pointer;
+  transition: 1s ease;
+
+}
+#delete-items:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 400px) {
+  .page h1 {
+    font-size: 24px;
+  }
+
+  #task-input,
+  #add-button,
+  #delete-items {
+    font-size: 14px;
+  }
+
+  #task-list li {
+    font-size: 14px;
+  }
+}
